@@ -43,3 +43,9 @@ git commit -a -m 'Changes on master branch'
 
 # Create the merge conflict
 git merge feature
+if [ -e '.git/MERGE_HEAD' ]
+then
+    echo "Created repository with merge conflict."
+else
+    echo "Failed to create repository with merge conflict."
+fi
